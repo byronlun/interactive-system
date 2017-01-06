@@ -1,0 +1,65 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: url(../images/1.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.content {
+	width: 300px;
+	margin: 10% auto;
+	padding: 0px 0px 10px 8px;
+	background-color: white;
+}
+
+.switchMenu {
+	width: 300px;
+	display: table;
+	clear: both;
+}
+
+.switchMenu li {
+	width: 50%;
+  	float: left;
+  	text-align: center;
+  	list-style-type: none;
+}
+
+.switchMenu li a {
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	/*background: #d2d8d8;*/
+  	color: #809191;
+  	text-decoration: none;
+}
+
+.switchNone {
+	display: none;
+}
+
+form {
+	width: 800px;
+	display: inline;
+}
+
+.control-group {
+	display: inline-block;
+	position: relative;
+}
+
+.control-label {
+	width: 60px;
+	text-align: right;
+	margin-right: 5px;
+}
+
+
+#signIn, #loginIn {
+	background-color: #72cde3;
+	width:200px;
+}

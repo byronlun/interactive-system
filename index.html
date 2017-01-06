@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>课下互动平台</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/index.js"></script>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="content">
+	  <ul id="myTabs" class="nav nav-tabs" role="tablist">
+	    <li class="active"><a href="#task" aria-controls="task" role="tab" data-toggle="tab">作业平台</a></li>
+	    <li><a href="#community" aria-controls="community" role="tab" data-toggle="tab">话题社区</a></li>
+	    <li><a href="#resources" aria-controls="resources" role="tab" data-toggle="tab">资源平台</a></li>
+	    <!-- <li><a href="#personalData" aria-controls="personalData" role="tab" data-toggle="tab">个人资料</a></li> -->
+	    <li class="dropdown">
+	      <a href="#" id="myTabDrop1" class="dropdown-toggle" 
+	         data-toggle="dropdown">个人信息 <b class="caret"></b>
+	      </a>
+	      <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+	         <li><a href="#loginOut" id="loginOut" tabindex="-1" data-toggle="tab">
+	            退出登录</a>
+	         </li>
+	         <li><a href="#personalData" tabindex="-1" data-toggle="tab">
+	            管理个人资料</a>
+	         </li>
+	      </ul>
+	   	</li>
+	  </ul>
+
+	  <div class="tab-content">
+	    <div role="tabpanel" class="tab-pane active" id="task">
+	    	<div class="taskType studentOnly">
+	    		<div class="targetItem showHW" id="allHW"><a href="javascript:void(0)">全部作业</a></div>
+	    		<div class="showHW" id="uploadedHW"><a href="javascript:void(0)">已交作业</a></div>
+	    		<div class="showHW" id="noUploadHW"><a href="javascript:void(0)">未交作业</a></div>
+	    	</div><hr>
+	    	<div class="taskType teacherOnly">
+	    		<div class="targetItem showHW" id="teacherAllHW"><a href="javascript:void(0)">全部作业</a></div>
+	    		<div class="showHW" id="publichHW"><a href="javascript:void(0)">发布作业</a></div>
+	    	</div><hr>
+	    	<div class="taskContent studentOnly">
+	    		<table>
+	    			<tbody>
+	    				<tr class="tableList tableHead">
+	    					<th>作业标题</th>
+	    					<th>作者</th>
+	    					<th>截止时间</th>
+	    					<th>提交时间</th>
+	    					<th>操作</th>
+	    				</tr>
+	    			</tbody>
+	    		</table>
+	    	</div>
+	    	<div class="taskContent teacherOnly">
+	    		<table>
+	    			<tbody>
+	    				<tr class="tableList tableHead">
+	    					<th>作业标题</th>
+	    					<th>作者</th>
+	    					<th>截止时间</th>
+	    					<th>提交时间</th>
+	    					<th>操作</th>
+	    				</tr>
+	    			</tbody>
+	    		</table>
+	    	</div>
+	    	<div style="display: none;" class="publichView">
+	    		<form class="form-horizontal">
+		    		<div class="form-group">
+							<label for="hwTitle" class="col-sm-2 control-label">作业标题</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="hwTitle" placeholder="请输入作业标题">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="hwContent" class="col-sm-2 control-label">作业内容</label>
+							<div class="col-sm-8">
+								<textarea id="hwContent" class="form-control" rows="4" cols="90" placeholder="请输入作业内容"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="deadline" class="col-sm-2 control-label">截止时间</label>
+							<div class="col-sm-8">
+								<input type="date" class="form-control" id="deadline">
+							</div>
+						</div>
+					</form>
+					<button id="publichHWBtn" class="col-sm-2 btn btn-default" style="float: right; position: relative; top: -50px;">发布作业</button>
+	    	</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="community">
+	    	<div class="teacherOnly messageBoard">
+	    		<h3>思想碰撞</h3>
+	    		<div>
+						<input type="text" class="form-control" id="topicTitle" placeholder="请输入话题标题"><br>
+	    			<textarea id="topicContent" class="form-control" rows="4" cols="90" placeholder="请输入话题内容"></textarea>
+	    		</div>
+	    		<button class="btn btn-default publish">发表话题</button>
+	    	</div>
+	    	<div class="discussContent">
+	    	</div>
+	    	
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="resources">
+	    	<div class="resourceList">
+	    		<div>
+	    			<div class="listItem">
+		    			<a href=""><strong>操作系统课程设计指导书.doc</strong></a>
+	    				<i></i>
+		    		</div>
+	    			<p>发布人：bob | 上传时间：2015-03-01 | 下载时间：2 | 大小： 1KB</p>
+	    			<hr>
+	    		</div>
+	    		<div>
+	    			<div class="listItem">
+		    			<a href=""><strong>操作系统课程设计指导书.doc</strong></a>
+	    				<i></i>
+		    		</div>
+	    			<p>发布人：bob | 上传时间：2015-03-01 | 下载时间：2 | 大小： 1KB</p><hr>
+	    		</div>
+	    		<div>
+	    			<div class="listItem">
+		    			<a href=""><strong>操作系统课程设计指导书.doc</strong></a>
+	    				<i></i>
+		    		</div>
+	    			<p>发布人：bob | 上传时间：2015-03-01 | 下载时间：2 | 大小： 1KB</p><hr>
+	    		</div>
+	    		<div>
+	    			<div class="listItem">
+		    			<a href=""><strong>操作系统课程设计指导书.doc</strong></a>
+	    				<i></i>
+		    		</div>
+	    			<p>发布人：bob | 上传时间：2015-03-01 | 下载时间：2 | 大小： 1KB</p><hr>
+	    		</div>
+	    		<div>
+	    			<div class="listItem">
+		    			<a href=""><strong>操作系统课程设计指导书.doc</strong></a>
+	    				<i></i>
+		    		</div>
+	    			<p>发布人：bob | 上传时间：2015-03-01 | 下载时间：2 | 大小： 1KB</p><hr>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="personalData">
+	    	<div class="leftPanel">
+	    		<div class="logo">
+	    			<img src="./images/logo.jpg" alt="">
+	    		</div>
+	    		<p id="showId"></p>
+	    		<p id="showName"></p>
+	    		<button class="btn btn-sm">返回首页</button>
+	    		<button class="btn btn-sm">编辑资料</button>
+	    	</div>
+    		<div class="rightPanel">
+    			<div>
+    				<h3 style="text-align: center;"><strong>基本信息</strong></h3><hr>
+    			</div>
+    			<div>
+    				<form class="form-horizontal" id="editForm">
+	    				<div class="form-group">
+								<label for="uid" class="col-sm-3 control-label">学(工)号</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="uid" readonly>
+								</div>
+							</div>
+    					<div class="form-group">
+								<label for="username" class="col-sm-3 control-label">用户名</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="username" readonly>
+								</div>
+								<button type="button" class="editButton col-sm-3 btn btn-link">编辑</button>
+							</div>
+							<div class="form-group">
+								<label for="email" class="col-sm-3 control-label">邮箱</label>
+								<div class="col-sm-6">
+									<input type="email" class="form-control" id="email" readonly>
+								</div>
+								<button type="button" class="editButton col-sm-3 btn btn-link">编辑</button>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">性别</label>
+								<div class="col-sm-6 radio">
+							   	<label class="radio-inline">
+									  <input type="radio" name="sex" value="男"> 男
+									</label>
+									<label class="radio-inline">
+									  <input type="radio" name="sex" value="女"> 女
+									</label>
+								</div>
+								<button type="button" class="editButton col-sm-3 btn btn-link">编辑</button>
+							</div>
+							<div class="form-group">
+								<label  class="col-sm-3 control-label">年龄</label>
+								<div class="col-sm-6">
+									<input type="number" min="1" max="100" class="form-control" id="age" readonly>
+								</div>
+								<button type="button" class="editButton col-sm-3 btn btn-link">编辑</button>
+							</div>
+							<div class="form-group">
+								<label for="loginInPassword" class="col-sm-3 control-label">密码</label>
+								<div class="col-sm-6">
+									<input type="password" class="form-control" id="password" readonly>
+								</div>
+								<button type="button" class="editButton col-sm-3 btn btn-link">编辑</button>
+							</div><br>
+							<label class="col-sm-1" style="he"></label>
+							<button type="button" class="col-sm-4 btn btn-info" id="resetEdit">放弃修改</button>
+							<label class="col-sm-2"></label>
+							<button type="button" class="col-sm-4 btn btn-info" id="submitEdit">提交修改</button>
+							<label class="col-sm-1"></label>
+    				</form>
+    			</div>
+    		</div>
+	    </div>
+	  </div>
+	</div>
+</body>
+</html>

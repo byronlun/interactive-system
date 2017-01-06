@@ -1,0 +1,18 @@
+{
+  "name": "interactsystem",
+  "version": "1.0.0",
+  "description": "use nodejs mysql jquery bootstrap to do a interact system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "byronlun",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "multer": "^1.2.1",
+    "mysql": "^2.12.0",
+    "nodemon": "^1.11.0"
+  }
+}

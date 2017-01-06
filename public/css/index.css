@@ -1,0 +1,303 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: rgb(238,238,238);
+}
+
+.content {
+	width: 70%;
+	margin: 10px auto;
+}
+
+
+#myTabs > li {
+	width: 25%;
+	text-align: center;
+}
+
+/*作业*/
+
+#task {
+	/* height: 500px; */
+	padding: 20px;
+	background-color: white;
+	border: 1px solid rgb(238,238,238);
+}
+
+.taskType div {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+	line-height: 80px;
+	text-align: center;
+
+}
+
+.taskType div a {
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	background-color: rgb(238,238,238);
+	border-radius: 50%;
+	border: 2px solid rgb(238,238,238);
+	vertical-align: middle;
+}
+
+.tableHead {
+	background-color: rgb(96, 131, 173);
+	color: white;
+}
+
+.taskContent table {
+	width: 740px;
+	margin: 0 auto;
+}
+.tableList th, .tableList td {
+	height: 30px;
+	padding: 8px 10px 8px 4px;
+	text-align: center;
+
+}
+
+.taskType div.targetItem a {
+	background-color: white;
+}
+
+.fileInputA {
+	display:inline-block;
+	width:80px;
+	/* height:20px; */
+	position:relative;
+	top: 6px;
+	left: 0px;
+	overflow:hidden;
+}
+
+.fileInputA input{
+	position:absolute;
+	right:0;
+	top:0;
+	font-size:100px;
+	opacity:0;
+}
+.showFileName {
+	display: inline-block;
+	margin: 0;
+	position: relative;
+	top: 1px;
+	left: -15px;
+}
+
+.toggleClass {
+	display: none;
+}
+
+/*习题资源*/
+.resourceList {
+	padding: 20px;
+	background-color: white;
+
+}
+
+.resourceList a {
+	text-decoration: none;
+	color: black;
+}
+
+.listItem {
+	margin: 20px 0;
+}
+
+.listItem a:hover, .listItem i:hover {
+	cursor: pointer;
+}
+
+.resourceList i {
+	width: 25px;
+	height: 25px;
+	float: right;
+	position: relative;
+	background-image: url(../images/download.png);
+	margin-right: 20px;
+}
+
+.resourceList i:hover {
+	background: url(../images/download.png) no-repeat top -25px right 0px;
+}
+
+.resourceList p {
+	font-size: 12px;
+    color: #666;
+    line-height: 24px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.resourceList hr {
+	border: 1px dashed rgb(238, 238, 238);
+	border: 1px 0px 0px 0px;
+	width: 800px;
+}
+
+/*讨论区*/
+.messageBoard {
+	background-color: white;
+	padding: 10px;
+}
+
+.messageBoard h3 {
+	background-color: #4a9778;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin: 0px 0px 10px 0px;
+}
+
+.messageBoard div {
+	display: inline-block;
+}
+
+.messageBoard button {
+	float: right;
+	margin: 110px 40px 0px 0px;
+	background-color: rgb(238,238,238);
+}
+
+.discussContent {
+	background-color: white;
+	margin-top: 10px;
+	padding: 20px;
+}
+
+.contentShow {
+	background-color: rgb(238,238,238);
+	padding: 20px;
+}
+.rightMin {
+	float: right;
+  font-size: 0.8em;
+}
+.commentlist {
+	clear: right;
+}
+.commentMan {
+	float: left;
+	font-size: 1.2em;
+	padding: 10px;
+}
+.commentContent {
+	margin-left: 20px;
+	background-color: rgb(238,238,238);
+	padding: 10px;
+	overflow: hidden;
+}
+.commentField {
+	background-color: white;
+	/* padding: 20px; */
+}
+.commentDiv {
+	/* padding: 10px; */
+  display: inline-block;
+}
+.publish {
+	float: right;
+	margin-top: 60px;
+	background-color: rgb(238,238,238);
+}
+
+
+
+/*个人信息*/
+.leftPanel {
+	width: 250px;
+	height: 400px;
+	background-color: white;
+	padding: 5px;
+	float: left;
+}
+
+.leftPanel div {
+	width: 100px;
+	height: 100px;
+	margin: 20px auto;
+	background-color: red;
+	border-radius: 50%;
+}
+
+.leftPanel div img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.leftPanel button {
+	margin: 40px 0px 0px 32px;
+}
+
+.leftPanel p {
+	width: 120px;
+	margin: 0 auto;
+	text-align: center;
+}
+.rightPanel {
+	background-color: white;
+	padding: 10px;
+	margin-left: 260px;
+	height: 500px;
+}
+.rightPanel .form-group {
+	height: 30px;
+}
+.rightPanel form .form-control {
+	box-shadow: none;
+	border: 0px;
+	background-color: white
+}
+.editButton {
+	position: relative;
+	width: 120px;
+}
+.editButton:before {
+	content: "　";
+	position: absolute;
+	left: 20px;
+	background-image: url('../images/edit-icon.svg');
+	background-repeat: no-repeat;
+}
+.form-horizontal .radio {
+	padding-top: 0px;
+}
+.editPassword {
+	margin-left: 100px;
+}
+
+#newPassword, #newEnsurePassword {
+	display: inline-block;
+	width: 200px;
+}
+
+.unshow {
+	display: none;
+}
+
+footer {
+	width: 200px;
+	margin: 0 auto;
+	clear: both;
+}
+
+footer p {
+	margin: 0;
+	font-size: 80%;
+	color: black;
+}
+
+.teacherOnly, .studentOnly {
+	display: none;
+}
